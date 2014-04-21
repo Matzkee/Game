@@ -8,8 +8,17 @@ public class BoxEdges
 
 public class PlayerControls : MonoBehaviour {
 
+	public GameObject playerBolt;
+	public Transform boltPos;
 	public float speed = 10.0f;
 	public BoxEdges edges;
+
+	void Update()
+	{
+		if (Input.GetButton ("Fire1")) {
+			Instantiate (playerBolt, boltPos.position, boltPos.rotation);
+				}
+	}
 
 	void FixedUpdate () {
 		float xPos = Input.GetAxis("Horizontal");
