@@ -8,15 +8,19 @@ public class BoxEdges
 
 public class PlayerControls : MonoBehaviour {
 
+	private bool readyToFire = true;
+	private float lastTimeFired = 0.0f;
+
 	public GameObject playerBolt;
 	public Transform boltPos;
 	public float speed = 10.0f;
+	public float fireRate = 1.0f;
 	public BoxEdges edges;
 
 	void Update()
 	{
-		if (Input.GetButton ("Fire1")) {
-			Instantiate (playerBolt, boltPos.position, boltPos.rotation);
+		if ((Input.GetButton ("Fire1")) && (readyToFire)) {
+			fire();
 				}
 	}
 
@@ -33,5 +37,14 @@ public class PlayerControls : MonoBehaviour {
 			0.0f, 
 			Mathf.Clamp (rigidbody.position.z, edges.zMin, edges.zMax) // limit z axis
 		);
+	}
+
+	void fire()
+	{
+		if(Time.time > (fireRate + lastTimeFired))
+		{
+			Instantiate (playerBolt, boltPos.position, boltPos.rotation);
+			lastTimeFired = Time.time;
+		}
 	}
 }
