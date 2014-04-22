@@ -10,6 +10,7 @@ public class PlayerControls : MonoBehaviour {
 
 	private bool readyToFire = true;
 	private float lastTimeFired = 0.0f;
+	public float tilt = 0.0f;
 
 	public GameObject playerBolt;
 	public Transform boltPos;
@@ -37,6 +38,7 @@ public class PlayerControls : MonoBehaviour {
 			0.0f, 
 			Mathf.Clamp (rigidbody.position.z, edges.zMin, edges.zMax) // limit z axis
 		);
+		rigidbody.rotation = Quaternion.Euler (0.0f,0.0f,rigidbody.velocity.x * -tilt);
 	}
 
 	void fire()
