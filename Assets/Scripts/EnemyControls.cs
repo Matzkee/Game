@@ -6,7 +6,6 @@ public class EnemyControls : MonoBehaviour {
 	public float minX;
 	public float maxX;
 
-
 	void Start()
 	{
 		minX = transform.position.x - 10;
