@@ -8,7 +8,6 @@ public class BoxEdges
 
 public class PlayerControls : MonoBehaviour {
 
-	private bool readyToFire = true;
 	private float lastTimeFired = 0.0f;
 	public float tilt = 0.0f;
 
@@ -20,7 +19,7 @@ public class PlayerControls : MonoBehaviour {
 
 	void Update()
 	{
-		if ((Input.GetButton ("Fire1")) && (readyToFire)) {
+		if (Input.GetButton ("Fire1") ) {
 			fire();
 				}
 	}

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BoltVelocity.cs" />
+     <Compile Include="Assets\Scripts\DestroyOnCollision.cs" />
      <Compile Include="Assets\Scripts\EnemyBolt.cs" />
      <Compile Include="Assets\Scripts\EnemyControls.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />

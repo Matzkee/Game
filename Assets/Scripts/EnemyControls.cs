@@ -3,13 +3,19 @@ using System.Collections;
 
 public class EnemyControls : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public float minX;
+	public float maxX;
+
+
+	void Start()
+	{
+		minX = transform.position.x - 10;
+		maxX = transform.position.x + 10;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update()
+	{
+		transform.position = new Vector3 (Mathf.PingPong(Time.time*4,maxX-minX)+minX, transform.position.y, transform.position.z);
 	}
+
 }
