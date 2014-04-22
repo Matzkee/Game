@@ -38,5 +38,6 @@
 -define:UNITY_EDITOR_WIN
 Assets/Scripts/BoltVelocity.cs
 Assets/Scripts/PlayerControls.cs
+Assets/Scripts/VoidDestroy.cs
 -r:"E:/Program Files (x86)/Unity3D/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
 -r:"E:/Program Files (x86)/Unity3D/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

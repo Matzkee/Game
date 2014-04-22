@@ -44,6 +44,7 @@ public class PlayerControls : MonoBehaviour {
 		if(Time.time > (fireRate + lastTimeFired))
 		{
 			Instantiate (playerBolt, boltPos.position, boltPos.rotation);
+			audio.Play();
 			lastTimeFired = Time.time;
 		}
 	}
