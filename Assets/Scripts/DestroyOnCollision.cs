@@ -6,13 +6,15 @@ public class DestroyOnCollision : MonoBehaviour {
 	public int bugScore;
 	private Game gameControll;
 
+	public GameObject explosionEffect;
+
 	void Start()
 	{
-		//Look for Our Game script to allow us update the score which is located in Game script
-		GameObject gameContObject = GameObject.FindWithTag ("GameController");
-		if (gameContObject != null)
+		//Look for Our Game script to allow us update the score which is located in GameControl
+		GameObject gameCont = GameObject.FindWithTag ("GameController");
+		if (gameCont != null)
 		{
-			gameControll = gameContObject.GetComponent <Game>();
+			gameControll = gameCont.GetComponent <Game>();
 		}
 	}
 
@@ -21,8 +23,9 @@ public class DestroyOnCollision : MonoBehaviour {
 		if (other.tag == "PlayerBolt")
 		{
 			Debug.Log("Hit the enemy!");
-
 			gameControll.addToScore(bugScore);
+
+			Instantiate(explosionEffect, transform.position, transform.rotation);
 
 			Destroy(other.gameObject);
 			Destroy (gameObject);
