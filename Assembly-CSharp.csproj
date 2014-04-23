@@ -47,13 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BoltVelocity.cs" />
-     <Compile Include="Assets\Scripts\DestroyOnCollision.cs" />
      <Compile Include="Assets\Scripts\EnemyBolt.cs" />
      <Compile Include="Assets\Scripts\EnemyControls.cs" />
+     <Compile Include="Assets\Scripts\EnemyDestroyed.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
+     <Compile Include="Assets\Scripts\PlayerDestroyed.cs" />
      <Compile Include="Assets\Scripts\RemoveEntity.cs" />
-     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
      <Compile Include="Assets\Scripts\VoidDestroy.cs" />
      <None Include="Assets\images\References.txt" />
   </ItemGroup>

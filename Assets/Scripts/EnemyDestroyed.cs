@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyOnCollision : MonoBehaviour {
+public class EnemyDestroyed : MonoBehaviour {
 
 	public int bugScore;
 	private Game gameControll;
@@ -14,10 +14,12 @@ public class DestroyOnCollision : MonoBehaviour {
 		GameObject gameCont = GameObject.FindWithTag ("GameController");
 		if (gameCont != null)
 		{
+			//Get the Game Script
 			gameControll = gameCont.GetComponent <Game>();
 		}
 	}
 
+	//Collision detection
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "PlayerBolt")
