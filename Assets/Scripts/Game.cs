@@ -51,6 +51,10 @@ public class Game : MonoBehaviour
 			{
 				Application.LoadLevel(Application.loadedLevel);
 			}
+			else if(Input.GetKeyDown(KeyCode.M))
+			{
+				Application.LoadLevel(0);
+			}
 		}
 	}
 
@@ -96,7 +100,7 @@ public class Game : MonoBehaviour
 			yield return new WaitForSeconds(WaveTimer);
 			if (gameFinish)
 			{
-				resetGameText.text = "Press 'R' to restart";
+				resetGameText.text = "Press 'R' to restart\n or 'M' to return to main menu";
 				resetGame = true;
 				break;
 			}

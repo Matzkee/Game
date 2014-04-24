@@ -9,7 +9,7 @@ public class EnemyControls : MonoBehaviour {
 	public GameObject enemyBolt;
 	public Transform boltPos;
 
-	public float difficulty = 0.09f;
+	public float difficulty = 0.999f;
 	public float enemyFireRate = 2.0f;
 	private float lastTimeFired = 0.0f;
 
@@ -23,6 +23,7 @@ public class EnemyControls : MonoBehaviour {
 	{
 		transform.position = new Vector3 (Mathf.PingPong(Time.time*4,maxX-minX)+minX, transform.position.y, transform.position.z);
 
+		//chance for shooting random.value returns random float between 0 and 1
 		if(Random.value > difficulty)
 		{
 			if(Time.time > (enemyFireRate + lastTimeFired))

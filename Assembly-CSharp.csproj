@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\EnemyControls.cs" />
      <Compile Include="Assets\Scripts\EnemyDestroyed.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MenuPlayerHover.cs" />
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\PlayerDestroyed.cs" />
      <Compile Include="Assets\Scripts\RemoveEntity.cs" />
