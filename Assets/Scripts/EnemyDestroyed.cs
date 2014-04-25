@@ -24,7 +24,6 @@ public class EnemyDestroyed : MonoBehaviour {
 	{
 		if (other.tag == "PlayerBolt")
 		{
-			Debug.Log("Hit the enemy!");
 			gameControll.addToScore(bugScore);
 
 			Instantiate(explosionEffect, transform.position, transform.rotation);
