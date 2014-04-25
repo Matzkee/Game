@@ -8,6 +8,7 @@ public class Game : MonoBehaviour
 	public GUIText LifeCount;
 	public GUIText gameOverText;
 	public GUIText resetGameText;
+	public GUIText PauseText;
 
 	public float PlayerSpawnTime;
 	public GameObject Player;
@@ -38,6 +39,7 @@ public class Game : MonoBehaviour
 		waveCount = 0;
 		gameOverText.text = "";
 		resetGameText.text = "";
+		PauseText.text = "";
 		PauseGame = false;
 		spawnTrack = enemySpawn.position;
 		gameFinish = false;
@@ -61,10 +63,12 @@ public class Game : MonoBehaviour
 		}
 		if (PauseGame == true) 
 		{
+			PauseText.text = "Paused";
 			Time.timeScale = 0.0f;
 		}
 		else
 		{
+			PauseText.text = "";
 			Time.timeScale = 1.0f;
 		}
 
