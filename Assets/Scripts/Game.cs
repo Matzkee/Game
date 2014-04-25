@@ -20,8 +20,9 @@ public class Game : MonoBehaviour
 	public float SpawnTime = 1.0f;
 	public int enemyRows;
 	public int enemyCols;
-
 	public float WaveTimer = 5.0f;
+
+	public bool PauseGame;
 
 	private int Lives;
 	private bool gameFinish;
@@ -37,6 +38,7 @@ public class Game : MonoBehaviour
 		waveCount = 0;
 		gameOverText.text = "";
 		resetGameText.text = "";
+		PauseGame = false;
 		spawnTrack = enemySpawn.position;
 		gameFinish = false;
 		UpdateText();
@@ -45,6 +47,28 @@ public class Game : MonoBehaviour
 
 	void Update()
 	{
+		//Pause the game
+		if(Input.GetKeyDown(KeyCode.P))
+		{
+			if(PauseGame == true)
+			{
+				PauseGame = false;
+			}
+			else
+			{
+				PauseGame = true;
+			}
+		}
+		if (PauseGame == true) 
+		{
+			Time.timeScale = 0.0f;
+		}
+		else
+		{
+			Time.timeScale = 1.0f;
+		}
+
+		//Reset the Game
 		if(resetGame)
 		{
 			if(Input.GetKeyDown(KeyCode.R))
