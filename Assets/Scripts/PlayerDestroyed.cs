@@ -10,7 +10,7 @@ public class PlayerDestroyed : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//Look for Our Game script to allow us update the score which is located in GameControl
+		//Look for Our Game script to allow us update lives
 		GameObject gameCont = GameObject.FindWithTag ("GameController");
 		if (gameCont != null)
 		{
@@ -18,7 +18,7 @@ public class PlayerDestroyed : MonoBehaviour {
 			gameControll = gameCont.GetComponent <Game>();
 		}
 	}
-
+	//Remove 1 life whenever player hits enemy bolt
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "EnemyBolt")

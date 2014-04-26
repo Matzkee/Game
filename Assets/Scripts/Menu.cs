@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Menu : MonoBehaviour {
 
+	//a bool is used just so i can use the same script for other text objects
 	public bool isExit = false;
 
 	void OnMouseEnter()

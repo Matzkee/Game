@@ -13,7 +13,7 @@ public class MenuPlayerHover : MonoBehaviour {
 	public float minRotationZ;
 	public float maxRotationZ;
 
-
+	//hovering effect of the ship in menu selection
 	void Update()
 	{
 		transform.position = new Vector3 (transform.position.x, 

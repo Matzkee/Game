@@ -19,12 +19,14 @@ public class PlayerControls : MonoBehaviour {
 
 	void Update()
 	{
+		//Fire1 is one of the default inputs in unity directly changed in unity input settings
 		if (Input.GetButton ("Fire1") ) {
 			fire();
 				}
 	}
 
 	void FixedUpdate () {
+		//Horizontal and Vertical are also set values in unity input settings
 		float xPos = Input.GetAxis("Horizontal");
 		float yPos = Input.GetAxis("Vertical");
 
@@ -40,6 +42,7 @@ public class PlayerControls : MonoBehaviour {
 		rigidbody.rotation = Quaternion.Euler (0.0f,0.0f,rigidbody.velocity.x * -tilt);
 	}
 
+	//fire rating script
 	void fire()
 	{
 		if(Time.time > (fireRate + lastTimeFired))

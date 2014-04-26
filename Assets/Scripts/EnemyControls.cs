@@ -9,8 +9,8 @@ public class EnemyControls : MonoBehaviour {
 	public GameObject enemyBolt;
 	public Transform boltPos;
 
-	public float difficulty = 0.999f;
-	public float enemyFireRate = 2.0f;
+	public float difficulty = 0.995f; // 0.5% chance to fire per frame
+	private float enemyFireRate = 2.0f;
 	private float lastTimeFired = 0.0f;
 
 	void Start()
@@ -33,5 +33,4 @@ public class EnemyControls : MonoBehaviour {
 			}
 		}
 	}
-
 }

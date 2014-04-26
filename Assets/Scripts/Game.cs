@@ -102,6 +102,8 @@ public class Game : MonoBehaviour
 
 	//in order to setup any kind of timer instead of void we have to use IEnumerator and instantiate it with StartCoroutine() function
 	//then were able to use functions like WaitForSeconds.
+	//
+	//Wave spawning
 	IEnumerator spawnEnemies()
 	{
 		while(true)
