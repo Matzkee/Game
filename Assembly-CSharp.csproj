@@ -58,7 +58,6 @@
      <Compile Include="Assets\Scripts\PlayerDestroyed.cs" />
      <Compile Include="Assets\Scripts\RemoveEntity.cs" />
      <Compile Include="Assets\Scripts\VoidDestroy.cs" />
-     <None Include="Assets\images\References.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
